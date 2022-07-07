@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: #9C3EA6;
+    color: #ffffff;
+}
+
+.container {
+    position: absolute;
+    width: 300px;
+    height: 505px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #111;
+    box-shadow: 0px -10px 20px #0f0c1171, 0px 10px 20px #0f0c1171, 10px 0px 20px #0f0c1171, -10px 0px 20px #0f0c1171;
+    border-radius: 6px;
+}
+
+header {
+    margin-top: 25px;
+}
+
+.alinhamento {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.quadroFt {
+    position: relative;
+    background-color: #5eee7f;
+}
+
+.quadroFt::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    outline: 3px dashed rgba(0, 255, 0, 0.959);
+    outline-offset: 3px;
+    border-radius: 50%;
+    animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+p, footer > a{
+    color: #c2c0aec5;
+    text-transform: none;
+}
+a {
+    text-transform: uppercase;
+}
+
+.link > a {
+    color: blue;
+    text-decoration: none;
+}
+
+.link:hover {
+    background-color: #05fa3f;
+    box-shadow: 0px 0px 8px gray;
+    transition-duration: 0.2s;
+    transform: scale(1.05);
+}
+
+ 
+
+
+
+
+ 
+@media only screen and (max-width: 1600px) {
+
+    header {
+        font-size: 10px;
+    }
+
+    .quadroFt {
+        width: 69px;
+        height: 69px;
+        border-radius: 100px;
+        
+    }
+    .ftPerfil {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 100px; 
+        
+    }
+    
+    .nomePerfil {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.1em;
+        font-weight: 600;
+        line-height: 38px;
+        letter-spacing: 0em;
+        text-align: center;
+
+    }
+
+    p {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 1.4em;
+        font-weight: 400;
+        line-height: 2px;
+    }
+    p.marginText {
+        margin-top: 0px;
+    }
+    .marginText {
+        margin: 8px auto;
+    }
+    .link {
+        background-color: #5eee7f;
+        width: 100%;
+        margin: 18px auto;
+        padding: 10px 80px;
+        border-radius: 6px;
+        text-align: center;
+    }
+} 
+
+@media only screen and (min-width: 1600px) {
+    
+    .container {
+        position: absolute;
+        width: 800px;
+        height: 1100px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #111;
+        box-shadow: 0px -10px 20px #0f0c1171, 0px 10px 20px #0f0c1171, 10px 0px 20px #0f0c1171, -10px 0px 20px #0f0c1171;
+        border-radius: 6px;
+    }
+
+    header {
+        font-size: 10px;
+    }
+
+    .quadroFt {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        
+    }
+    .ftPerfil {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 100px; 
+        
+    }
+    
+    .nomePerfil {
+        font-family: 'Roboto', sans-serif;
+        font-size: 4em;
+        font-weight: 600;
+        line-height: 38px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        padding-top: 1em;
+    }
+
+    p {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 2.7em;
+        font-weight: 400;
+        line-height: 2px;
+        padding-top: 1em;
+    }
+    /* p.marginText {
+        margin-top: 0px;
+    }
+    .marginText {
+        margin: 8px auto;
+    } */
+    .link {
+        background-color: #5eee7f;
+        width: 100%;
+        margin: 18px auto;
+        padding: 30px 200px;
+        border-radius: 6px;
+        text-align: center;
+    }
+    .link > a {
+        font-size: 2em;
+    }
+    footer {
+        font-size: 1.9em;
+    }
+}
